@@ -12,7 +12,7 @@ export default function Home() {
     e.preventDefault();
     const termino = searchInputRef.current.value
     if (!termino.trim()) return;
-    router.push(`/search?termino=${termino.trim()}`)
+    router.push(`/search?termino=${termino.trim()}&searchType=`)
   }
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
           <input ref={searchInputRef} type="text" className='flex-grow focus:outline-none '></input>
           <MicrophoneIcon className='h-5' />
         </div>
-        <div className='flex flex-col mt-3 sm:flex-row w-[50%] space-y-2 mt-8 sm: space-y-0 sm: space-x-4 justify-center'>
+        <div className='flex flex-col  sm:flex-row w-[50%] space-y-2 mt-8 sm: space-y-2 sm: space-x-4 justify-center'>
           <button onClick={search} className="btn">Buscar con google </button>
           <button className="btn">Voy a tener suerte </button></div>
 
